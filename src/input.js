@@ -10,8 +10,9 @@ export default class Input {
    *
    * @param {any} stream - stream to catch (optional)
    */
-  constructor(stream = process.stdin) {
+  constructor(options, stream = process.stdin) {
     // set default values
+    this.options = options;
     this.stream = stream;
     this.values = [];
     this.selectedValue = 0;
