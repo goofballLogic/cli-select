@@ -33,7 +33,7 @@ const creator = (options, callback) => {
 
   // create renderer and input instances
   const renderer = new Renderer(options, options.outputStream);
-  const input = new Input(options.inputStream);
+  const input = new Input(options, options.inputStream);
   input.setDefaultValue(options.defaultValue);
   input.attachRenderer(renderer);
 
